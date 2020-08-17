@@ -1,0 +1,169 @@
+2020-08-17 17:32:04,847 p=22947 u=arasmy n=ansible | ansible-playbook 2.9.11
+  config file = None
+  configured module search path = ['/Users/arasmy/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.8/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.8.5 (default, Jul 21 2020, 10:42:08) [Clang 11.0.0 (clang-1100.0.33.17)]
+2020-08-17 17:32:04,847 p=22947 u=arasmy n=ansible | No config file found; using defaults
+2020-08-17 17:32:04,861 p=22947 u=arasmy n=ansible | host_list declined parsing /Users/arasmy/repos/solace-training-ansible/training-template/broker.inventory.yml as it did not pass its verify_file() method
+2020-08-17 17:32:04,862 p=22947 u=arasmy n=ansible | script declined parsing /Users/arasmy/repos/solace-training-ansible/training-template/broker.inventory.yml as it did not pass its verify_file() method
+2020-08-17 17:32:04,866 p=22947 u=arasmy n=ansible | Parsed /Users/arasmy/repos/solace-training-ansible/training-template/broker.inventory.yml inventory source with yaml plugin
+2020-08-17 17:32:05,457 p=22947 u=arasmy n=ansible | PLAYBOOK: config-playbook.yml *****************************************************************************************************************************************
+2020-08-17 17:32:05,458 p=22947 u=arasmy n=ansible | 1 plays in ./config-playbook.yml
+2020-08-17 17:32:05,477 p=22947 u=arasmy n=ansible | PLAY [Congifure objects on broker] ************************************************************************************************************************************
+2020-08-17 17:32:05,485 p=22947 u=arasmy n=ansible | META: ran handlers
+2020-08-17 17:32:05,491 p=22947 u=arasmy n=ansible | TASK [Pause Until Broker/Service available] ***************************************************************************************************************************
+2020-08-17 17:32:05,491 p=22947 u=arasmy n=ansible | task path: /Users/arasmy/repos/solace-training-ansible/training-template/config-playbook.yml:48
+2020-08-17 17:32:05,512 p=22951 u=arasmy n=ansible | <broker1> ESTABLISH LOCAL CONNECTION FOR USER: arasmy
+2020-08-17 17:32:05,513 p=22951 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c 'echo ~arasmy && sleep 0'
+2020-08-17 17:32:05,532 p=22951 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/arasmy/.ansible/tmp `"&& mkdir /Users/arasmy/.ansible/tmp/ansible-tmp-1597678325.532044-22951-82356126068837 && echo ansible-tmp-1597678325.532044-22951-82356126068837="` echo /Users/arasmy/.ansible/tmp/ansible-tmp-1597678325.532044-22951-82356126068837 `" ) && sleep 0'
+2020-08-17 17:32:05,761 p=22951 u=arasmy n=ansible | Using module file /usr/local/lib/python3.8/site-packages/ansible/modules/network/solace/solace_get_available.py
+2020-08-17 17:32:05,762 p=22951 u=arasmy n=ansible | <broker1> PUT /Users/arasmy/.ansible/tmp/ansible-local-22947f25dnv8x/tmp_grzug3t TO /Users/arasmy/.ansible/tmp/ansible-tmp-1597678325.532044-22951-82356126068837/AnsiballZ_solace_get_available.py
+2020-08-17 17:32:05,764 p=22951 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c 'chmod u+x /Users/arasmy/.ansible/tmp/ansible-tmp-1597678325.532044-22951-82356126068837/ /Users/arasmy/.ansible/tmp/ansible-tmp-1597678325.532044-22951-82356126068837/AnsiballZ_solace_get_available.py && sleep 0'
+2020-08-17 17:32:05,786 p=22951 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c '/usr/local/bin/python3 /Users/arasmy/.ansible/tmp/ansible-tmp-1597678325.532044-22951-82356126068837/AnsiballZ_solace_get_available.py && sleep 0'
+2020-08-17 17:32:06,322 p=22951 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c 'rm -f -r /Users/arasmy/.ansible/tmp/ansible-tmp-1597678325.532044-22951-82356126068837/ > /dev/null 2>&1 && sleep 0'
+2020-08-17 17:32:06,354 p=22947 u=arasmy n=ansible | ok: [broker1] => {
+    "attempts": 1,
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "host": "3.125.157.247",
+            "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+            "port": 8080,
+            "secure_connection": false,
+            "timeout": 60,
+            "username": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+            "x_broker": ""
+        }
+    },
+    "is_available": true,
+    "msg": {},
+    "rc": 0
+}
+2020-08-17 17:32:06,360 p=22947 u=arasmy n=ansible | TASK [Create Client Profile] ******************************************************************************************************************************************
+2020-08-17 17:32:06,360 p=22947 u=arasmy n=ansible | task path: /Users/arasmy/repos/solace-training-ansible/training-template/config-playbook.yml:54
+2020-08-17 17:32:06,383 p=22970 u=arasmy n=ansible | <broker1> ESTABLISH LOCAL CONNECTION FOR USER: arasmy
+2020-08-17 17:32:06,384 p=22970 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c 'echo ~arasmy && sleep 0'
+2020-08-17 17:32:06,404 p=22970 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /Users/arasmy/.ansible/tmp `"&& mkdir /Users/arasmy/.ansible/tmp/ansible-tmp-1597678326.403353-22970-144696390846267 && echo ansible-tmp-1597678326.403353-22970-144696390846267="` echo /Users/arasmy/.ansible/tmp/ansible-tmp-1597678326.403353-22970-144696390846267 `" ) && sleep 0'
+2020-08-17 17:32:06,647 p=22970 u=arasmy n=ansible | Using module file /usr/local/lib/python3.8/site-packages/ansible/modules/network/solace/solace_client_profile.py
+2020-08-17 17:32:06,648 p=22970 u=arasmy n=ansible | <broker1> PUT /Users/arasmy/.ansible/tmp/ansible-local-22947f25dnv8x/tmpye1_dzvy TO /Users/arasmy/.ansible/tmp/ansible-tmp-1597678326.403353-22970-144696390846267/AnsiballZ_solace_client_profile.py
+2020-08-17 17:32:06,653 p=22970 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c 'chmod u+x /Users/arasmy/.ansible/tmp/ansible-tmp-1597678326.403353-22970-144696390846267/ /Users/arasmy/.ansible/tmp/ansible-tmp-1597678326.403353-22970-144696390846267/AnsiballZ_solace_client_profile.py && sleep 0'
+2020-08-17 17:32:06,674 p=22970 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c '/usr/local/bin/python3 /Users/arasmy/.ansible/tmp/ansible-tmp-1597678326.403353-22970-144696390846267/AnsiballZ_solace_client_profile.py && sleep 0'
+2020-08-17 17:32:07,406 p=22970 u=arasmy n=ansible | <broker1> EXEC /bin/sh -c 'rm -f -r /Users/arasmy/.ansible/tmp/ansible-tmp-1597678326.403353-22970-144696390846267/ > /dev/null 2>&1 && sleep 0'
+2020-08-17 17:32:07,434 p=22947 u=arasmy n=ansible | changed: [broker1] => {
+    "changed": true,
+    "invocation": {
+        "module_args": {
+            "host": "3.125.157.247",
+            "msg_vpn": "aly_vpn",
+            "name": "aly_ansible_cp",
+            "password": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+            "port": 8080,
+            "secure_connection": false,
+            "settings": {
+                "allowGuaranteedMsgReceiveEnabled": true,
+                "allowGuaranteedMsgSendEnabled": true
+            },
+            "solace_cloud_api_token": null,
+            "solace_cloud_service_id": null,
+            "state": "present",
+            "timeout": 60,
+            "username": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+            "x_broker": ""
+        }
+    },
+    "response": {
+        "allowBridgeConnectionsEnabled": false,
+        "allowCutThroughForwardingEnabled": false,
+        "allowGuaranteedEndpointCreateDurability": "all",
+        "allowGuaranteedEndpointCreateEnabled": false,
+        "allowGuaranteedMsgReceiveEnabled": true,
+        "allowGuaranteedMsgSendEnabled": true,
+        "allowSharedSubscriptionsEnabled": false,
+        "allowTransactedSessionsEnabled": false,
+        "apiQueueManagementCopyFromOnCreateName": "",
+        "apiQueueManagementCopyFromOnCreateTemplateName": "",
+        "apiTopicEndpointManagementCopyFromOnCreateName": "",
+        "apiTopicEndpointManagementCopyFromOnCreateTemplateName": "",
+        "clientProfileName": "aly_ansible_cp",
+        "compressionEnabled": true,
+        "elidingDelay": 0,
+        "elidingEnabled": false,
+        "elidingMaxTopicCount": 256,
+        "eventClientProvisionedEndpointSpoolUsageThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "eventConnectionCountPerClientUsernameThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "eventEgressFlowCountThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "eventEndpointCountPerClientUsernameThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "eventIngressFlowCountThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "eventServiceSmfConnectionCountPerClientUsernameThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "eventServiceWebConnectionCountPerClientUsernameThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "eventSubscriptionCountThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "eventTransactedSessionCountThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "eventTransactionCountThreshold": {
+            "clearPercent": 60,
+            "setPercent": 80
+        },
+        "maxConnectionCountPerClientUsername": 100,
+        "maxEgressFlowCount": 1000,
+        "maxEndpointCountPerClientUsername": 1000,
+        "maxIngressFlowCount": 1000,
+        "maxSubscriptionCount": 50000,
+        "maxTransactedSessionCount": 10,
+        "maxTransactionCount": 5000,
+        "msgVpnName": "aly_vpn",
+        "queueControl1MaxDepth": 20000,
+        "queueControl1MinMsgBurst": 4,
+        "queueDirect1MaxDepth": 20000,
+        "queueDirect1MinMsgBurst": 4,
+        "queueDirect2MaxDepth": 20000,
+        "queueDirect2MinMsgBurst": 4,
+        "queueDirect3MaxDepth": 20000,
+        "queueDirect3MinMsgBurst": 4,
+        "queueGuaranteed1MaxDepth": 20000,
+        "queueGuaranteed1MinMsgBurst": 255,
+        "rejectMsgToSenderOnNoSubscriptionMatchEnabled": false,
+        "replicationAllowClientConnectWhenStandbyEnabled": false,
+        "serviceSmfMaxConnectionCountPerClientUsername": 100,
+        "serviceWebInactiveTimeout": 30,
+        "serviceWebMaxConnectionCountPerClientUsername": 100,
+        "serviceWebMaxPayload": 1000000,
+        "tcpCongestionWindowSize": 2,
+        "tcpKeepaliveCount": 5,
+        "tcpKeepaliveIdleTime": 3,
+        "tcpKeepaliveInterval": 1,
+        "tcpMaxSegmentSize": 1460,
+        "tcpMaxWindowSize": 256,
+        "tlsAllowDowngradeToPlainTextEnabled": true
+    }
+}
+2020-08-17 17:32:07,435 p=22947 u=arasmy n=ansible | META: ran handlers
+2020-08-17 17:32:07,436 p=22947 u=arasmy n=ansible | META: ran handlers
+2020-08-17 17:32:07,437 p=22947 u=arasmy n=ansible | PLAY RECAP ************************************************************************************************************************************************************
+2020-08-17 17:32:07,437 p=22947 u=arasmy n=ansible | broker1                    : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
