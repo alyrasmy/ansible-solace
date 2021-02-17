@@ -29,7 +29,7 @@
     gather_facts: no
     any_errors_fatal: true
     module_defaults:
-      solace_get_available:
+      solace.pubsub_plus.solace_get_available:
         host: "{{ sempv2_host }}"
         port: "{{ sempv2_port }}"
         secure_connection: "{{ sempv2_is_secure_connection }}"
@@ -39,7 +39,7 @@
 
     tasks:
       - name: "Pause Until Broker/Service available"
-        solace_get_available:
+        solace.pubsub_plus.solace_get_available:
         register: _result
         until: "_result.rc == 0 and _result.is_available == True"
         retries: 25 # 25 * 5 seconds
